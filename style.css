@@ -1,0 +1,19 @@
+
+
+.icon{
+    width: 40px;
+    height: 25px;
+    background-image: url("icons/cards.png");
+}
+#mastercard{
+    background-position: 0 0;
+}
+#visa{
+    background-position: -25% 0;
+}
+#maestro{
+    background-position: -50% 0;
+}
+#card{
+    background-position: -100% 0;
+}
