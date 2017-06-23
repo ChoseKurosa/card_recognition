@@ -4,8 +4,9 @@ function validateForm() {
     var maestroPrefix = [5018,5020,5033,5038];
     var isMatch = false;
 
+
     if (inputValue.indexOf("4") == 0) {
-        changeCardImage("visa")
+        changeCardImage("visa");
         return;
     }
 
@@ -15,7 +16,7 @@ function validateForm() {
         if(inputValue.indexOf(masterCardPrefix[i])== 0)
         {
             isMatch = true;
-            changeCardImage("mastercard")
+            changeCardImage("mastercard");
             return;
         }
 
@@ -28,7 +29,7 @@ function validateForm() {
         if(inputValue.indexOf(maestroPrefix[i])== 0)
         {
             isMatch = true;
-            changeCardImage("maestro")
+            changeCardImage("maestro");
             return;
         }
 
@@ -39,20 +40,18 @@ function validateForm() {
 }
 
 function changeCardImage(card) {
-    var div = document.getElementsByClassName("icon");
-
     switch (card){
         case "visa":
-            div.id = "visa";
+            document.getElementById("idIcon").style.backgroundPosition="-44px 0";
             return;
         case "maestro":
-            div.id = "maestro";
+            document.getElementById("idIcon").style.backgroundPosition="-88px 0";
             return;
         case "mastercard":
-            div.id = "mastercard";
+            document.getElementById("idIcon").style.backgroundPosition="0 0";
             return;
         case "card":
-            div.id = "card";
+            document.getElementById("idIcon").style.backgroundPosition="-132px 0";
             return;
     }
 }
